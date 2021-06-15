@@ -1,0 +1,5 @@
+Credentials cache: API:7EB98DA3-C8D9-4113-8FD1-AF2B58E9F4A9
+        Principal: cdaniel@42KL.EDU.MY
+
+  Issued                Expires               Principal
+May 20 15:18:35 2021  May 21 01:18:21 2021  krbtgt/42KL.EDU.MY@42KL.EDU.MY
