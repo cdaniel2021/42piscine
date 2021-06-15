@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdaniel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/26 15:41:58 by cdaniel           #+#    #+#             */
-/*   Updated: 2021/06/01 14:30:25 by cdaniel          ###   ########.fr       */
+/*   Created: 2021/05/25 16:50:10 by cdaniel           #+#    #+#             */
+/*   Updated: 2021/05/26 12:55:23 by cdaniel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-void	ft_rev_int_tab(int *tab, int size)
-{
-	int	hold;
-	int	x;
+#include <unistd.h>
 
-	x = 0;
-	size--;
-	while (x < size)
+void	ft_print_comb(void)
+{
+	char	uno;
+	char	duo;
+	char	tri;
+
+	uno = 48;
+	while (uno <= 55)
 	{
-		hold = tab[x];
-		tab[x] = tab[size];
-		tab[size] = hold;
-		i++;
-		size--;
+		duo = uno + 1;
+		while (duo <= 56)
+		{
+			tri = duo + 1;
+			while (tri <= 57)
+			{
+				write (1, &uno, 1);
+				write (1, &duo, 1);
+				write (1, &tri, 1);
+				tri++;
+				if ((uno < 55) || (duo < 56) || (tri < 57))
+					write(1, ", ", 2);
+			}	
+			duo++;
+		}
+		uno++;
 	}
 }

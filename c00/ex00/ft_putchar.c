@@ -1,39 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdaniel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 01:46:22 by cdaniel           #+#    #+#             */
-/*   Updated: 2021/05/27 02:52:33 by cdaniel          ###   ########.fr       */
+/*   Created: 2021/05/22 17:43:51 by cdaniel           #+#    #+#             */
+/*   Updated: 2021/05/25 00:16:01 by cdaniel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+#include <unistd.h>
 
-void	ft_sort_int_tab(int *tab, int size)
+void	ft_putchar(char c)
 {
-	int	swap;
-	int	a;
-	int	b;
-
-	b = 1;
-	a = 0;
-	while (a < size)
-	{
-		while (b < size)
-		{
-			if (tab[a] > tab[b])
-			{
-				swap = tab[a];
-				tab[a] = tab[b];
-				tab[b] = swap;
-				b = 1;
-				a = 0;
-			}
-			b++;
-		}
-		a++;
-		b = a + 1;
-	}
+	write(1, &c, 1);
 }

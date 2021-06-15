@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdaniel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/26 13:37:35 by cdaniel           #+#    #+#             */
-/*   Updated: 2021/05/27 02:55:19 by cdaniel          ###   ########.fr       */
+/*   Created: 2021/05/25 16:47:49 by cdaniel           #+#    #+#             */
+/*   Updated: 2021/05/25 16:47:57 by cdaniel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_strlen(char *str)
-{
-	int	i;
+#include <unistd.h>
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+void	ft_print_alphabet(void)
+{
+	int	ch;
+
+	ch = 97;
+	while (ch <= 122)
+	{
+		write (1, &ch, 1);
+		ch++;
+	}
 }
